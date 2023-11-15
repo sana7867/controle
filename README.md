@@ -31,7 +31,7 @@
 
 # Categorie:
 
-![cotrl](https://github.com/sana7867/controle/assets/147515885/190d8145-f6ee-4e7a-81da-b8b6b8ba243c)
+![sw](https://github.com/sana7867/controle/assets/147515885/1983612b-b906-4ade-8810-6133ee30d099)
 
 #create:
 
