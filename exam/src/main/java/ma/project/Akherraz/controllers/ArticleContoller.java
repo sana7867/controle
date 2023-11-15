@@ -23,6 +23,23 @@ import ma.project.Akherraz.service.ArticleService;
 public class ArticleContoller {
 	@Autowired
 	private ArticleService bs;
+
+	@Autowired
+    private CategorieService categorieService;
+
+   
+
+    @GetMapping("/{id}/categories")
+    public ResponseEntity<Object> findCategoriesByArticle(@PathVariable Long id) {
+        Article article = bs.findById(id);
+
+        if (article == null) {
+            return new ResponseEntity<>("Article avec noArticle " + id + " n'existe pas", HttpStatus.BAD_REQUEST);
+        } else {
+            List<Categorie> categories = (List<Categorie>) article.getCategorie();
+            return ResponseEntity.ok(categories);
+        }
+    }
 	
 	@PostMapping("/save")
 	public Article createArticle(@RequestBody Article Article) {
